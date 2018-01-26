@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhs-54-Xbe">
+                                <rect key="frame" x="112" y="40" width="150" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="DmG-IP-ghj"/>
+                                    <constraint firstAttribute="width" constant="150" id="iJA-7i-y8Q"/>
+                                </constraints>
+                                <state key="normal" title="pthread基本使用"/>
+                                <connections>
+                                    <action selector="pthreadButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="or5-e5-VJT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nlg-aP-MgJ">
+                                <rect key="frame" x="112" y="100" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="LNd-rh-MwA"/>
+                                    <constraint firstAttribute="width" constant="150" id="Veu-NM-PkW"/>
+                                </constraints>
+                                <state key="normal" title="NSthread基本使用"/>
+                                <connections>
+                                    <action selector="NSThreadButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gwW-O5-Waf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhK-nv-1TI">
+                                <rect key="frame" x="112" y="170" width="150" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="4xj-Cw-qIs"/>
+                                    <constraint firstAttribute="width" constant="150" id="waj-hm-KIa"/>
+                                </constraints>
+                                <state key="normal" title="NSthread线程间通信"/>
+                                <connections>
+                                    <action selector="NSThreadDownloadButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3sm-Jm-IeQ"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AkJ-hM-txU">
+                                <rect key="frame" x="112" y="220" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="kQf-AC-fiW"/>
+                                    <constraint firstAttribute="height" constant="150" id="sGH-Ir-Dgv"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXk-gm-7ow">
+                                <rect key="frame" x="112" y="450" width="150" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="5Pu-hL-zo5"/>
+                                    <constraint firstAttribute="height" constant="40" id="EFo-0q-mSW"/>
+                                </constraints>
+                                <state key="normal" title="NSThread 线程安全"/>
+                                <connections>
+                                    <action selector="NSThreadSafeButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5xX-7j-MJO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGq-ik-afc">
+                                <rect key="frame" x="112" y="390" width="150" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="P6Y-CO-zKn"/>
+                                    <constraint firstAttribute="width" constant="150" id="rPb-bq-vBS"/>
+                                </constraints>
+                                <state key="normal" title="NSThread 非线程安全"/>
+                                <connections>
+                                    <action selector="NSThreadNoSafeButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6gO-4r-ovr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Nlg-aP-MgJ" firstAttribute="top" secondItem="hhs-54-Xbe" secondAttribute="bottom" constant="20" id="BC4-rz-2ia"/>
+                            <constraint firstItem="AkJ-hM-txU" firstAttribute="top" secondItem="zhK-nv-1TI" secondAttribute="bottom" constant="10" id="BM1-qI-SAN"/>
+                            <constraint firstItem="pXk-gm-7ow" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BRQ-T8-qsE"/>
+                            <constraint firstItem="Nlg-aP-MgJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BUm-RE-jbK"/>
+                            <constraint firstItem="dGq-ik-afc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Djd-i1-pkm"/>
+                            <constraint firstItem="hhs-54-Xbe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="HCv-Gf-aRR"/>
+                            <constraint firstItem="zhK-nv-1TI" firstAttribute="top" secondItem="Nlg-aP-MgJ" secondAttribute="bottom" constant="20" id="HOB-JS-ASs"/>
+                            <constraint firstItem="pXk-gm-7ow" firstAttribute="top" secondItem="dGq-ik-afc" secondAttribute="bottom" constant="20" id="NgH-oO-4OJ"/>
+                            <constraint firstItem="zhK-nv-1TI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YJ3-nR-xA4"/>
+                            <constraint firstItem="dGq-ik-afc" firstAttribute="top" secondItem="AkJ-hM-txU" secondAttribute="bottom" constant="20" id="eJ4-lN-MDj"/>
+                            <constraint firstItem="hhs-54-Xbe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wK7-NG-ela"/>
+                            <constraint firstItem="AkJ-hM-txU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zZf-cf-1QQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="AkJ-hM-txU" id="TWf-ww-snq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
