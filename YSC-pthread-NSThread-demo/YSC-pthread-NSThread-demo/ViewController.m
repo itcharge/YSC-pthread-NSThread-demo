@@ -144,11 +144,11 @@ void * run(void *param) // 新线程调用方法，里边为需要执行的任�
     self.ticketSaleWindow1 = [[NSThread alloc]initWithTarget:self selector:@selector(saleTicketNotSafe) object:nil];
     self.ticketSaleWindow1.name = @"北京火车票售票窗口";
     
-    
+    // 3. 设置上海火车票售卖窗口的线程
     self.ticketSaleWindow2 = [[NSThread alloc]initWithTarget:self selector:@selector(saleTicketNotSafe) object:nil];
     self.ticketSaleWindow2.name = @"上海火车票售票窗口";
     
-    // 3. 开始售卖火车票
+    // 4. 开始售卖火车票
     [self.ticketSaleWindow1 start];
     [self.ticketSaleWindow2 start];
     
@@ -192,11 +192,11 @@ void * run(void *param) // 新线程调用方法，里边为需要执行的任�
     self.ticketSaleWindow1 = [[NSThread alloc]initWithTarget:self selector:@selector(saleTicketSafe) object:nil];
     self.ticketSaleWindow1.name = @"北京火车票售票窗口";
     
-    
+    // 3. 设置上海火车票售卖窗口的线程
     self.ticketSaleWindow2 = [[NSThread alloc]initWithTarget:self selector:@selector(saleTicketSafe) object:nil];
     self.ticketSaleWindow2.name = @"上海火车票售票窗口";
     
-    // 3. 开始售卖火车票
+    // 4. 开始售卖火车票
     [self.ticketSaleWindow1 start];
     [self.ticketSaleWindow2 start];
     
